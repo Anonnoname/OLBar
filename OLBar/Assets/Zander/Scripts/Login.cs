@@ -34,8 +34,6 @@ public class Login : MonoBehaviour
                 Debug.Log("Login Success!");
                 Debug.Log(www.downloadHandler.text);
             }
-
-
         }
 
     }

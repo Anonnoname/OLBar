@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 1204621261}
   - component: {fileID: 1204621260}
   m_Layer: 5
-  m_Name: Password
+  m_Name: Username
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,6 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477892252}
+  - component: {fileID: 1477892253}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -930,6 +931,20 @@ RectTransform:
   m_AnchoredPosition: {x: -195.6, y: -4.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1477892253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477892251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9c8950dc92d784eb53e7be59f119bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginButton: {fileID: 0}
+  username: 
 --- !u!1 &1539708107
 GameObject:
   m_ObjectHideFlags: 0
