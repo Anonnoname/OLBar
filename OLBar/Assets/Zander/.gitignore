@@ -2,7 +2,6 @@
 # Unity generated #
 # =============== #
 */Assets/AssetStoreTools*
-*/Assets/Zander/Assets/Mirror/
 */[Tt]emp/
 */[Oo]bj/
 */UnityGenerated/
@@ -65,3 +64,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# User defined
+./Assets/Mirror/
