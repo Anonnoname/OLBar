@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Zander/Scenes/OLBar.unity
+    guid: 30b09bc632d74794c817dc7c11b24e38
+  - enabled: 1
+    path: Assets/Zander/Scenes/Login.unity
+    guid: fa157bb8ca9338d4995cbfb3763682a2
   m_configObjects: {}
