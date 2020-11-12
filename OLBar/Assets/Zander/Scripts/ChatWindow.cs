@@ -11,11 +11,12 @@ namespace OLBar
 
         public InputField chatMessage;
         public Text chatHistory;
-        public User user;
+        public Chat chat;
+
 
         public void Awake()
         {
-            User.OnMessage += OnUserMessage;
+            Chat.OnMessage += OnUserMessage;
         }
 
         void OnUserMessage(User user, string message)
@@ -34,10 +35,10 @@ namespace OLBar
             Debug.Log("message pass");
 
             // get our user
-            user = NetworkClient.connection.identity.GetComponent<User>();
+            chat = NetworkClient.connection.identity.GetComponent<Chat>();
 
             // send a message
-            user.CmdSend(chatMessage.text.Trim());
+            chat.CmdSend(chatMessage.text.Trim());
 
             chatMessage.text = "";
         }

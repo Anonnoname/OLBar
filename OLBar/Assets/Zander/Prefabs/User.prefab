@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5704504537533017277}
   - component: {fileID: 6609354280904431294}
   - component: {fileID: 6365382669368317018}
+  - component: {fileID: 815203658484292709}
   m_Layer: 0
   m_Name: User
   m_TagString: Untagged
@@ -119,6 +120,7 @@ MonoBehaviour:
   userName: 
   sanity: 0
   currency: 0
+  chat: {fileID: 0}
 --- !u!114 &6609354280904431294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +175,17 @@ MonoBehaviour:
     localRotation: {x: 0, y: 0, z: 0, w: 0}
     localScale: {x: 0, y: 0, z: 0}
     movementSpeed: 0
+--- !u!114 &815203658484292709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704504537533017276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d613c60dafc63842b8abac7a4dede45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
