@@ -13,8 +13,6 @@ namespace OLBar
             networkAddress = hostname;
         }
 
-        public OLBar OLBar;
-
         public struct CreateUserMessage : NetworkMessage
         {
             public string name;
@@ -42,8 +40,6 @@ namespace OLBar
 
             // set it as the player
             NetworkServer.AddPlayerForConnection(connection, usergo);
-
-            OLBar.gameObject.SetActive(true);
 
         }
     }

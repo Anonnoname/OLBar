@@ -52,7 +52,7 @@ namespace Mirror.Examples.Chat
 
             // it takes 2 frames for the UI to update ?!?!
             yield return null;
-            yield return null;
+            // yield return null;
 
             // slam the scrollbar down
             scrollbar.value = 0;
