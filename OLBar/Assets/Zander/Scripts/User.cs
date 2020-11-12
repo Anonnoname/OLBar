@@ -9,30 +9,39 @@ namespace OLBar
         [SyncVar]
         public string userName;
 
-        public static event Action<User, string> OnMessage;
+        [SyncVar]
+        public int sanity; // sanity system
 
-        public OLBarWindow olbarWindow;
+        [SyncVar]
+        public int currency; // currency system
+
+        // public Chat chat; // chat agent
+        
+        /***************************************
+                        CHAT 
+        ***************************************/
+        public static event Action<User, string> OnMessage;
+        // public User localUser;
+        // [SerializeField] private Canvas chatUI;
 
         [Command]
         public void CmdSend(string message)
         {
             if (message.Trim() != "")
-                RpcReceive(message.Trim());
+                RpcReceive($"{message}");
         }
 
         [ClientRpc]
-        public void RpcReceive(string msg)
+        public void RpcReceive(string message)
         {
-            OnMessage?.Invoke(this, msg);
-        }
 
-        void Update()
-        {
-            if (!isLocalPlayer) {return;}
+            // localUser = (User)gameObject.GetComponent<User>();
+            OnMessage?.Invoke(this, message);
 
-            float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 4f;
-            float moveY = Input.GetAxis("Vertical") * Time.deltaTime * 4f;
-            transform.Translate(moveX, moveY, 0);
         }
+        /***************************************
+                       END CHAT 
+        ***************************************/
+
     }
 }

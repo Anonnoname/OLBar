@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using System;
+using Mirror;
 
-public class Chat : MonoBehaviour
+namespace OLBar
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Chat : NetworkBehaviour
+    /*
+        Chat Agent 
+    */
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

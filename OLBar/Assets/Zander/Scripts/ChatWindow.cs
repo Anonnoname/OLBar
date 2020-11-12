@@ -5,15 +5,14 @@ using System.Collections;
 
 namespace OLBar
 {
-    public class OLBarWindow : NetworkBehaviour 
+    public class ChatWindow : NetworkBehaviour
     {
-        static readonly ILogger logger = LogFactory.GetLogger(typeof(OLBarWindow));
+        static readonly ILogger logger = LogFactory.GetLogger(typeof(ChatWindow));
 
         public InputField chatMessage;
         public Text chatHistory;
         public User user;
-        public Scrollbar scrollbar;
-        
+
         public void Awake()
         {
             User.OnMessage += OnUserMessage;
@@ -22,10 +21,9 @@ namespace OLBar
         void OnUserMessage(User user, string message)
         {
             string prettyMessage = user.isLocalPlayer ?
-                $"<color=red>{user.userName}: </color> {message}" :
-                $"<color=blue>{user.userName}: </color> {message}";
+                $"\n<color=red>{user.userName}: </color> {message}" :
+                $"\n<color=blue>{user.userName}: </color> {message}";
             AppendMessage(prettyMessage);
-
             logger.Log(message);
         }
 
@@ -33,8 +31,14 @@ namespace OLBar
         {
             if (chatMessage.text.Trim() == "")
                 return;
-            User user = NetworkClient.connection.identity.GetComponent<User>();
+            Debug.Log("message pass");
+
+            // get our user
+            user = NetworkClient.connection.identity.GetComponent<User>();
+
+            // send a message
             user.CmdSend(chatMessage.text.Trim());
+
             chatMessage.text = "";
         }
 
@@ -45,13 +49,12 @@ namespace OLBar
 
         IEnumerator AppendAndScroll(string message)
         {
-            chatHistory.text += message;
+            chatHistory.text += $"{message}";
 
             // it takes 2 frames for the UI to update ?!?!
             yield return null;
             yield return null;
 
-            scrollbar.value = 0;
         }
     }
 }
