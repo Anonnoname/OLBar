@@ -14,28 +14,20 @@ namespace OLBar
         float moveY;
         private void Start()
         {
-            state = 1;
+           // state = 1;
         }
 
         void Update()
         {
 
-
             if (!isLocalPlayer)
                 return;
-          
-          
            
-           // if(state == 1) {
-
-     
-           // }
-
+         
             User user = GetComponent<User>();
             if (user.sanity > 60) {
                 state = 1;
-            }
-            else {
+            }else {
                 state = 0;
             }
             switch (state) {
@@ -46,22 +38,18 @@ namespace OLBar
                     break;
                 case 1:
                     count += Random.Range(0, 0.02f);
-                     moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 4.0f + 0.03f * Mathf.Sin(count);
+                    moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 4.0f + 0.01f * Mathf.Sin(count);
                     count2 += Random.Range(0, 0.03f);
-                     moveY = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f + 0.03f * Mathf.Sin(count2);
-                    if (count > 10) {
+                    moveY = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f + 0.01f * Mathf.Sin(count2);
+                  
+                    if (count > 10){
                         count = 0;
-                        count2 = 0;
-                    }
+                        count2 = 0;}
                     transform.Translate(-moveX,-moveY, 0);
                     break;
 
 
             }
-           
-
-
-
         }
 
     }
