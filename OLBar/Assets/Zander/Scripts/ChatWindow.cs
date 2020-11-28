@@ -7,12 +7,10 @@ namespace OLBar
 {
     public class ChatWindow : NetworkBehaviour
     {
-        static readonly ILogger logger = LogFactory.GetLogger(typeof(ChatWindow));
-
         public InputField chatMessage;
         public Text chatHistory;
         public Chat chat;
-
+		public GameObject chatBox_prefab;
 
         public void Awake()
         {
@@ -21,12 +19,16 @@ namespace OLBar
 
         void OnUserMessage(User user, string message)
         {
-            string prettyMessage = user.isLocalPlayer ?
-                $"\n<color=red>{user.userName}: </color> {message}" :
-                $"\n<color=blue>{user.userName}: </color> {message}";
-            AppendMessage(prettyMessage);
-            logger.Log(message);
+			StartCoroutine(ShowMessage(user, message));
         }
+
+		IEnumerator ShowMessage(User user, string message)
+		{
+				Text text = user.chatBox.GetComponent<Text>();
+				text.text = message;
+				yield return new WaitForSeconds(5);
+				text.text = "";
+		}
 
         public void OnSend()
         {
@@ -50,12 +52,9 @@ namespace OLBar
 
         IEnumerator AppendAndScroll(string message)
         {
-            chatHistory.text += $"{message}";
-
-            // it takes 2 frames for the UI to update ?!?!
-            yield return null;
-            yield return null;
-
+            chatHistory.text = $"{message}";
+			yield return new WaitForSeconds(5);
+			chatHistory.text = "";
         }
     }
 }

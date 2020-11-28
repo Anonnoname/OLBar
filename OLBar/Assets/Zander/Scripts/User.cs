@@ -15,5 +15,13 @@ namespace OLBar
         [SyncVar]
         public int currency; // currency system
 
+		[SyncVar]
+		public int sleepiness; // sleepiness
+
+		[SyncVar]
+		public int hunger; // sleepiness
+
+		public GameObject chatBox; // chatbox
+
     }
 }
