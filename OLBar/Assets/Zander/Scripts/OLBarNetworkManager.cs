@@ -36,7 +36,13 @@ namespace OLBar
         {
             // create a gameobject using the name supplied by client
             GameObject usergo = Instantiate(playerPrefab);
-            usergo.GetComponent<User>().userName = createUserMessage.name;
+            User user = usergo.GetComponent<User>();
+
+			// initialize user
+			user.userName = createUserMessage.name;
+			user.currency = 1000;
+			user.sanity = 100;
+			user.hunger = 50;
 
             // set it as the player
             NetworkServer.AddPlayerForConnection(connection, usergo);

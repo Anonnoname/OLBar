@@ -23,5 +23,13 @@ namespace OLBar
 
 		public GameObject chatBox; // chatbox
 
+
+        public override void OnStartLocalPlayer()
+        {
+            Camera.main.transform.SetParent(transform);
+            Camera.main.transform.localPosition = new Vector3(0, 0, -10);
+        }
+
     }
+
 }
