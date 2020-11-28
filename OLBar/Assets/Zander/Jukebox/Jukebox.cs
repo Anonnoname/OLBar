@@ -14,7 +14,7 @@ namespace OLBar
 		bool mute = false;
 
 		[SyncVar]
-		int currentSong = 0;
+		public int currentSong = 0;
 
 	    void Start()
 	    {
