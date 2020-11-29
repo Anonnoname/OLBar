@@ -15,5 +15,21 @@ namespace OLBar
         [SyncVar]
         public int currency; // currency system
 
+        [SyncVar]
+        public int sleepiness; // sleepiness
+
+        [SyncVar]
+        public int hunger; // sleepiness
+
+        public GameObject chatBox; // chatbox
+
+
+        public override void OnStartLocalPlayer()
+        {
+            Camera.main.transform.SetParent(transform);
+            Camera.main.transform.localPosition = new Vector3(0, 0, -10); // set main camera position
+        }
+
     }
+
 }
