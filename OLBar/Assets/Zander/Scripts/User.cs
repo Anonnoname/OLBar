@@ -61,25 +61,23 @@ namespace OLBar
             InvokeRepeating("Tired", 5.0f, 0.0001f);
         }
 
-		private void Tired()
-		{
-				this.hunger += 0.01f;
-            // this.sleepiness += 0.0001f;
-		}
-
+        private void Tired()
+        {
+            if (this.hunger < 1)
+            {
+                this.hunger += 0.0001f;
+            }
+            if (this.sleepiness < 100)
+            {
+                this.sleepiness += 0.0001f;
+            }
+        }
         void Update()
         {
-            if (m_Vignette.intensity.value < 1)
-            {
+
                 m_Vignette.intensity.value = this.sleepiness;
-            }
-
-            if (m_ColorGrading.saturation > -100)
-            {
                 m_ColorGrading.saturation.value = -this.hunger;
-            }
-
-            m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - sanity);
+                m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - sanity);
         }
 
 

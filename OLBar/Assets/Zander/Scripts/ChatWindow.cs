@@ -10,7 +10,7 @@ namespace OLBar
         public InputField chatMessage;
         public Text chatHistory;
         public Chat chat;
-		public GameObject chatBox_prefab;
+        public GameObject chatBox_prefab;
 
         public void Awake()
         {
@@ -19,16 +19,16 @@ namespace OLBar
 
         void OnUserMessage(User user, string message)
         {
-			StartCoroutine(ShowMessage(user, message));
+            StartCoroutine(ShowMessage(user, message));
         }
 
-		IEnumerator ShowMessage(User user, string message)
-		{
-				Text text = user.chatBox.GetComponent<Text>();
-				text.text = message;
-				yield return new WaitForSeconds(5);
-				text.text = "";
-		}
+        IEnumerator ShowMessage(User user, string message)
+        {
+            Text text = user.chatBox.GetComponent<Text>();
+            text.text = message;
+            yield return new WaitForSeconds(5);
+            text.text = "";
+        }
 
         public void OnSend()
         {
@@ -43,18 +43,6 @@ namespace OLBar
             chat.CmdSend(chatMessage.text.Trim());
 
             chatMessage.text = "";
-        }
-
-        internal void AppendMessage(string message)
-        {
-            StartCoroutine(AppendAndScroll(message));
-        }
-
-        IEnumerator AppendAndScroll(string message)
-        {
-            chatHistory.text = $"{message}";
-			yield return new WaitForSeconds(5);
-			chatHistory.text = "";
         }
     }
 }
