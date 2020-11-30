@@ -1,6 +1,7 @@
 using System;
 using Mirror;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace OLBar
 {
@@ -23,12 +24,22 @@ namespace OLBar
 
         public GameObject chatBox; // chatbox
 
+		public GameObject postProcessing; // post processing filter
+
 
         public override void OnStartLocalPlayer()
         {
             Camera.main.transform.SetParent(transform);
             Camera.main.transform.localPosition = new Vector3(0, 0, -10); // set main camera position
+			InvokeRepeating("DecreaseHunger", 5.0f, 5.0f);
         }
+
+		private void DecreaseHunger()
+		{
+			if (this.hunger > 0) {
+				this.hunger -= 1;
+			}
+		}
 
     }
 
