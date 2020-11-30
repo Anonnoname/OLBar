@@ -10,7 +10,7 @@ namespace OLBar
         public InputField chatMessage;
         public Text chatHistory;
         public Chat chat;
-        public GameObject chatBox_prefab;
+        public User localUser;
 
         public void Awake()
         {
@@ -25,10 +25,29 @@ namespace OLBar
         IEnumerator ShowMessage(User user, string message)
         {
             Text text = user.chatBox.GetComponent<Text>();
-            text.text = message;
+            // text.text = message;
+            if (user.isLocalPlayer)
+            {
+                text.text = message;
+            }
+            else
+            {
+                float distance = Vector3.Distance(user.transform.position, localUser.transform.position);
+                if (distance > 5)
+                {
+                    text.text = "******";
+                }
+                else
+                {
+                    text.text = message;
+                }
+
+            }
+
             yield return new WaitForSeconds(5);
             text.text = "";
         }
+
 
         public void OnSend()
         {

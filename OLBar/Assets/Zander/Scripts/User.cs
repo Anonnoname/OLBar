@@ -25,10 +25,12 @@ namespace OLBar
         public GameObject chatBox; // chatbox
 
         // VISUAL EFFECTS
-        private PostProcessVolume m_Volume; // post processing filter
-        private Vignette m_Vignette;
-        private ColorGrading m_ColorGrading;
-        private LensDistortion m_LensDistortion;    
+        PostProcessVolume m_Volume; // post processing filter
+        Vignette m_Vignette;
+        ColorGrading m_ColorGrading;
+        LensDistortion m_LensDistortion;
+
+        // chatwindow
 
 
         public override void OnStartLocalPlayer() 
@@ -42,6 +44,10 @@ namespace OLBar
             this.sanity = 100;
             this.hunger = 0;
             this.sleepiness = 0;
+
+            // setup localUser
+            ChatWindow window = GameObject.Find("ChatWindow").GetComponent<ChatWindow>();
+            window.localUser = this;
 
             // setup visual effects
             m_Vignette = ScriptableObject.CreateInstance<Vignette>();
@@ -63,20 +69,20 @@ namespace OLBar
 
         private void Tired()
         {
-            if (this.hunger < 1)
+            if (hunger < 100)
             {
-                this.hunger += 0.0001f;
+                hunger += 0.0001f;
             }
-            if (this.sleepiness < 100)
+            if (sleepiness < 1)
             {
-                this.sleepiness += 0.0001f;
+                sleepiness += 0.000001f;
             }
         }
+
         void Update()
         {
-
-                m_Vignette.intensity.value = this.sleepiness;
-                m_ColorGrading.saturation.value = -this.hunger;
+                m_Vignette.intensity.value = sleepiness;
+                m_ColorGrading.saturation.value = -hunger;
                 m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - sanity);
         }
 
