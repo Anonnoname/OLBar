@@ -8,7 +8,6 @@ namespace OLBar
     public class ChatWindow : NetworkBehaviour
     {
         public InputField chatMessage;
-        public Text chatHistory;
         public Chat chat;
         public User localUser;
 
@@ -29,25 +28,27 @@ namespace OLBar
             if (user.isLocalPlayer)
             {
                 text.text = message;
+                yield return new WaitForSeconds(5f);
             }
             else
             {
-                float distance = Vector3.Distance(user.transform.position, localUser.transform.position);
-                if (distance > 5)
+                for (int i = 0; i < 500; ++i)
                 {
-                    text.text = "******";
-                }
-                else
-                {
-                    text.text = message;
+                    float distance = Vector3.Distance(user.transform.position, localUser.transform.position);
+                    if (distance > 5)
+                    {
+                        text.text = "******";
+                    }
+                    else
+                    {
+                        text.text = message;
+                    }
+                    yield return new WaitForSeconds(0.01f);
                 }
 
             }
-
-            yield return new WaitForSeconds(5);
             text.text = "";
         }
-
 
         public void OnSend()
         {
