@@ -72,12 +72,9 @@ MonoBehaviour:
   userName: 
   sanity: 0
   currency: 0
-<<<<<<< HEAD
-=======
   sleepiness: 0
   hunger: 0
   chatBox: {fileID: 6263532869470363364}
->>>>>>> zander
 --- !u!114 &6609354280904431294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +144,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   localUser: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &4646601527839155938
-MonoBehaviour:
-=======
 --- !u!212 &4342797313710115339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -231,19 +224,11 @@ BoxCollider2D:
 --- !u!50 &-3657148337660811678
 Rigidbody2D:
   serializedVersion: 4
->>>>>>> zander
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5704504537533017276}
-<<<<<<< HEAD
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40df4f53f13cf42d2a21cb397635857e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -435,4 +420,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
->>>>>>> zander
