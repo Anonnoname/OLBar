@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class drinkUI : MonoBehaviour
+public class drinkUI : NetworkBehaviour
 {
     public GameObject bartender;
     public GameObject chatbox;
     public GameObject menu;
-    bool activate;
+    public bool activate;
     // Start is called before the first frame update
     void Start()
     {
+
         bartender.SetActive(false);
+        chatbox.SetActive(false);
+        menu.SetActive(false);
+
         activate = false;
     }
 
@@ -22,6 +27,9 @@ public class drinkUI : MonoBehaviour
         if (activate) {
 
             bartender.SetActive(true);
+            chatbox.SetActive(true);
+            menu.SetActive(true);
+
         }
     }
 }
