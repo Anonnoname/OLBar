@@ -23,7 +23,7 @@ namespace OLBar
                 return;
             User user = GetComponent<User>();
             //check if the player is drunk or not
-            if (user.sanity > 60) {
+            if (user.sanity < 60) {
                 state = 1;
             }else {
                 state = 0;

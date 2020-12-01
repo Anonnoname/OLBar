@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 namespace OLBar
@@ -13,6 +14,8 @@ namespace OLBar
 
 		bool mute = false;
 
+		public GameObject canvas;
+
 		[SyncVar]
 		public int currentSong = 0;
 
@@ -20,6 +23,19 @@ namespace OLBar
 	    {
 			isPlaying = false;
 	    }
+
+
+		void OnTriggerEnter2D(Collider2D other)
+		{
+				Debug.Log("Player entered");
+				canvas.SetActive(true);
+		}
+
+		void OnTriggerExit2D(Collider2D other)
+		{
+				Debug.Log("Player left");
+				canvas.SetActive(false);
+		}
 
 		void ChooseSong (int index) {
 			User user = GetComponent<User>();
