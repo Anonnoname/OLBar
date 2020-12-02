@@ -5,8 +5,6 @@ using UnityEngine;
 using System;
 using Mirror;
 
-namespace OLBar
-{
     public class Chat : NetworkBehaviour
     {
         /*
@@ -38,4 +36,3 @@ namespace OLBar
                        END CHAT 
         ***************************************/
     }
-}

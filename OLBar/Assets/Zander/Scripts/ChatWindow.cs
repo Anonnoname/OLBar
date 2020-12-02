@@ -3,8 +3,7 @@ using UnityEngine.UI;
 using Mirror;
 using System.Collections;
 
-namespace OLBar
-{
+
     public class ChatWindow : NetworkBehaviour
     {
         public InputField chatMessage;
@@ -65,4 +64,4 @@ namespace OLBar
             chatMessage.text = "";
         }
     }
-}
+

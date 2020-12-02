@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-namespace OLBar
-{
+
     public class Movement : NetworkBehaviour
     {
-        int state;
+        public int state;
         float count;
         float count2;
         //direction 
@@ -27,10 +26,16 @@ namespace OLBar
                 return;
             User user = GetComponent<User>();
             //check if the player is drunk or not
-            if (user.sanity < 60) {
-                state = 1;
-            }else {
-                state = 0;
+            if (state != 2)
+            {
+                if (user.sanity < 60)
+                {
+                    state = 1;
+                }
+                else
+                {
+                    state = 0;
+                }
             }
 
             //switch player's movement behaviour based on the drunk state.
@@ -58,6 +63,9 @@ namespace OLBar
                         count2 = 0;}
                     transform.Translate(-moveX,-moveY, 0);
                     break;
+                case 2:
+
+                    break;
     
             }
                         // connect to the animation
@@ -65,4 +73,3 @@ namespace OLBar
         }
 
     }
-}

@@ -3,8 +3,7 @@ using Mirror;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-namespace OLBar
-{
+
     public class User: NetworkBehaviour
     {
         [SyncVar]
@@ -90,4 +89,4 @@ namespace OLBar
 
     }
 
-}
+
