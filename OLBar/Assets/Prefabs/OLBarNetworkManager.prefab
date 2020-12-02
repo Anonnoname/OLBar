@@ -92,7 +92,7 @@ MonoBehaviour:
   autoStartServerBuild: 1
   showDebugMessages: 0
   serverTickRate: 30
-  offlineScene: Assets/Zander/Scenes/Login.unity
+  offlineScene: 
   onlineScene: Assets/Zander/Scenes/OLBar.unity
   transport: {fileID: 4276626318529102299}
   networkAddress: localhost

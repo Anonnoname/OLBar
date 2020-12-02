@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class bartenderTrigger : MonoBehaviour
+public class bartenderTrigger : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,14 +20,23 @@ public class bartenderTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("Player entered");
-        other.GetComponent<drinkUI>().enterArea = true;
+        
+        if (other.GetComponent<User>().isLocalPlayer)
+        {
+            Debug.Log("Player entered");
+            other.GetComponent<drinkUI>().enterArea = true;
+        }
+        
        
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Player left");
-        other.GetComponent<drinkUI>().enterArea = false;
+        if (other.GetComponent<User>().isLocalPlayer)
+        {
+           Debug.Log("Player left");
+        other.GetComponent<drinkUI>().enterArea = false; 
+        }
+        
     }
 }

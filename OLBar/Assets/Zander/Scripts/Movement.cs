@@ -59,7 +59,7 @@ using Mirror;
                     if (count > 10){
                         count = 0;
                         count2 = 0;}
-                    transform.Translate(-moveX,-moveY, 0);
+                    transform.Translate(-moveX,-moveY, -moveY);
                     break;
                 case 2:
 
