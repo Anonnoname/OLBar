@@ -40,8 +40,6 @@ namespace OLBar
                     moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 4.0f;
                     moveY = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f;
                     transform.Translate(moveX, moveY, 0);
-                    _animator.SetFloat("move_right",moveX);
-                    _animator.SetFloat("move_front",moveY);
                     break;
 
                 //drunk behaviour
@@ -61,7 +59,8 @@ namespace OLBar
     
             }
                         // connect to the animation
-
+            _animator.SetFloat("move_right",moveX);
+            _animator.SetFloat("move_front",moveY);
         }
 
     }
