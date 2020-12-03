@@ -23,7 +23,6 @@ public class User : NetworkBehaviour
     public GameObject chatBox; // chatbox
 
     // VISUAL EFFECTS
-    VFX vFX;
     // chatwindow
 
 
@@ -44,8 +43,7 @@ public class User : NetworkBehaviour
         window.localUser = this;
 
         // setup visual effects
-        vFX = new VFX();
-
+        InvokeRepeating("Tired", 5.0f, 0.0001f);
     }
 
 

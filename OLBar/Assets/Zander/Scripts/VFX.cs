@@ -15,7 +15,7 @@ public class VFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        user = GetComponent<User>();
+        user = GetComponentInParent<User>();
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
         m_Vignette.intensity.Override(0f);
@@ -30,7 +30,6 @@ public class VFX : MonoBehaviour
         m_LensDistortion.scale.Override(1f);
 
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_ColorGrading, m_Vignette, m_LensDistortion);
-        InvokeRepeating("Tired", 5.0f, 0.0001f);
     }
 
     // Update is called once per frame
