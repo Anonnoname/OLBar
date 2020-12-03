@@ -45,8 +45,6 @@ using Mirror;
                     moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 4.0f;
                     moveY = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f;
                     transform.Translate(moveX, moveY, 0);
-                    _animator.SetFloat("move_right",moveX);
-                    _animator.SetFloat("move_front",moveY);
                     break;
 
                 //drunk behaviour
@@ -61,7 +59,7 @@ using Mirror;
                     if (count > 10){
                         count = 0;
                         count2 = 0;}
-                    transform.Translate(-moveX,-moveY, 0);
+                    transform.Translate(-moveX,-moveY, -moveY);
                     break;
                 case 2:
 
@@ -69,7 +67,8 @@ using Mirror;
     
             }
                         // connect to the animation
-
+            _animator.SetFloat("move_right",moveX);
+            _animator.SetFloat("move_front",moveY);
         }
 
     }
