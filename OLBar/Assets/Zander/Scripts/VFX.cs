@@ -16,6 +16,10 @@ public class VFX : MonoBehaviour
     void Start()
     {
         user = GetComponentInParent<User>();
+        if (!user.isLocalPlayer)
+        {
+            return;
+        }
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
         m_Vignette.intensity.Override(0f);
@@ -35,6 +39,10 @@ public class VFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!user.isLocalPlayer)
+        {
+            return;
+        }
         m_Vignette.intensity.value = user.sleepiness;
         m_ColorGrading.saturation.value = user.hunger;
         m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - user.sanity);
