@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-namespace OLBar
-{
-    public class drink : NetworkBehaviour
+    public class Drink : NetworkBehaviour
     {
         User user;
         // Start is called before the first frame update
@@ -22,11 +20,10 @@ namespace OLBar
 
         }
 
-     public void Drink(string name)
+     public void drink(string name)
         {
             user.sanity -= 10;
 
 
         }
     }
-}

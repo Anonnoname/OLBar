@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: 59ef534a2a884424e85d4e24ad77d41a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3382725878189631487
+    second: girl_walking_side_0
+  - first:
+      213: -6584347271380924879
+    second: girl_walking_side_1
+  - first:
+      213: 373247525866549779
+    second: girl_walking_side_2
+  - first:
+      213: 5448576713076685540
+    second: girl_walking_side_3
+  - first:
+      213: 8063263725042824835
+    second: girl_walking_side_4
+  - first:
+      213: -3045867577128508573
+    second: girl_walking_side_5
+  - first:
+      213: 3294613993682214615
+    second: girl_walking_side_6
+  - first:
+      213: -8834473124107737872
+    second: girl_walking_side_7
+  - first:
+      213: -6753376732397455757
+    second: girl_walking_side_8
+  - first:
+      213: -7562051266749773461
+    second: girl_walking_side_9
+  - first:
+      213: 309546331509614621
+    second: girl_walking_side_10
+  - first:
+      213: 6071164003362741221
+    second: girl_walking_side_11
+  - first:
+      213: 4407872965845077440
+    second: girl_walking_side_12
+  - first:
+      213: 1463764645906999222
+    second: girl_walking_side_13
+  - first:
+      213: 2199105306201229039
+    second: girl_walking_side_14
+  - first:
+      213: 5070602662019265164
+    second: girl_walking_side_15
+  - first:
+      213: 2718455583681496095
+    second: girl_walking_side_16
+  - first:
+      213: -9110456420974812480
+    second: girl_walking_side_17
+  - first:
+      213: -8917565081385381761
+    second: girl_walking_side_18
+  - first:
+      213: -3406056734704479722
+    second: girl_walking_side_19
+  - first:
+      213: -655632669493158130
+    second: girl_walking_side_20
+  - first:
+      213: -2216872223633649079
+    second: girl_walking_side_0
+  - first:
+      213: 8882859989108173938
+    second: girl_walking_side_1
+  - first:
+      213: 1361067371643062558
+    second: girl_walking_side_2
+  - first:
+      213: -6267133546476459334
+    second: girl_walking_side_3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: girl_walking_side_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 3
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942d2e545761c31e0800000000000000
+      internalID: -2216872223633649079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_walking_side_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 5
+        width: 42
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ca250c812464b70800000000000000
+      internalID: 8882859989108173938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_walking_side_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19c822309b73e210800000000000000
+      internalID: 1361067371643062558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_walking_side_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 5
+        width: 42
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba26528e3ba609a0800000000000000
+      internalID: -6267133546476459334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 62a66c3c37f534c09bd83f225c116c15
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

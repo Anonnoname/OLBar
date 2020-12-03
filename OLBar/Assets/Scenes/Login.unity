@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
   m_PrefabInstance: {fileID: 4276626318343815850}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1940143769}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 352106b17943d9c4c801c25bb65cd80a, type: 3}
@@ -2151,6 +2151,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767800987}
   m_CullTransparentMesh: 0
+--- !u!1 &1940143769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4276626318529102277, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
+  m_PrefabInstance: {fileID: 4276626318343815850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1940143771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940143769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClientConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  Port: 7777
+  NoDelay: 1
+  Interval: 10
+  FastResend: 0
+  CongestionWindow: 1
+  SendWindowSize: 128
+  ReceiveWindowSize: 128
+  debugGUI: 0
 --- !u!1 &2124986904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,12 +2435,24 @@ PrefabInstance:
       value: OLBarNetworkManager
       objectReference: {fileID: 0}
     - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
+      propertyPath: spawnPrefabs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
       propertyPath: onlineScene
       value: Assets/Scenes/mainScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
       propertyPath: offlineScene
+      value: Assets/Scenes/Login.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
+      propertyPath: playerPrefab
       value: 
+      objectReference: {fileID: 5704504537533017276, guid: d93f9850503a2f540b4d984731df2aa1, type: 3}
+    - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
+      propertyPath: playerSpawnMethod
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4276626318529102297, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2437,5 +2498,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4276626318529102299, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
