@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4276626318529102297}
   - component: {fileID: 4276626318529102296}
   - component: {fileID: 4276626318529102298}
-  - component: {fileID: 8223282370200946231}
+  - component: {fileID: 4595672880283102326}
   m_Layer: 0
   m_Name: OLBarNetworkManager
   m_TagString: Untagged
@@ -52,7 +52,7 @@ MonoBehaviour:
   serverTickRate: 30
   offlineScene: 
   onlineScene: Assets/Zander/Scenes/OLBar.unity
-  transport: {fileID: 8223282370200946231}
+  transport: {fileID: 4595672880283102326}
   networkAddress: localhost
   maxConnections: 4
   disconnectInactiveConnections: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   showGUI: 1
   offsetX: 0
   offsetY: 0
---- !u!114 &8223282370200946231
+--- !u!114 &4595672880283102326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4276626318529102277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnClientConnected:
@@ -113,11 +113,9 @@ MonoBehaviour:
   OnServerDisconnected:
     m_PersistentCalls:
       m_Calls: []
-  Port: 7777
+  port: 7777
   NoDelay: 1
-  Interval: 10
-  FastResend: 0
-  CongestionWindow: 1
-  SendWindowSize: 128
-  ReceiveWindowSize: 128
-  debugGUI: 0
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000

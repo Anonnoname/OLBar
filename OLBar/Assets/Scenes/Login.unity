@@ -9127,7 +9127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1940143769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnClientConnected:
@@ -9154,14 +9154,12 @@ MonoBehaviour:
   OnServerDisconnected:
     m_PersistentCalls:
       m_Calls: []
-  Port: 7777
+  port: 7777
   NoDelay: 1
-  Interval: 10
-  FastResend: 0
-  CongestionWindow: 1
-  SendWindowSize: 128
-  ReceiveWindowSize: 128
-  debugGUI: 0
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
 --- !u!1 &2124986904
 GameObject:
   m_ObjectHideFlags: 0
@@ -9466,5 +9464,4 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4276626318529102299, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
-    - {fileID: 4595672880283102326, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
