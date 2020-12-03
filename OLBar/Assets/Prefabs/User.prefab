@@ -748,7 +748,6 @@ GameObject:
   - component: {fileID: 5704504537533017272}
   - component: {fileID: 5704504537533017274}
   - component: {fileID: 5704504537533017277}
-  - component: {fileID: 6609354280904431294}
   - component: {fileID: 6365382669368317018}
   - component: {fileID: 815203658484292709}
   - component: {fileID: 4342797313710115339}
@@ -757,6 +756,7 @@ GameObject:
   - component: {fileID: 5419160628343554166}
   - component: {fileID: 8841363307325957350}
   - component: {fileID: 8772938889009125090}
+  - component: {fileID: 7191916238706037003}
   m_Layer: 0
   m_Name: User
   m_TagString: Untagged
@@ -818,21 +818,6 @@ MonoBehaviour:
   sleepiness: 0
   hunger: 0
   chatBox: {fileID: 6263532869470363364}
---- !u!114 &6609354280904431294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5704504537533017276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1149cc76b378a3a49b8e3bf59314b995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  state: 0
 --- !u!114 &6365382669368317018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1028,21 @@ MonoBehaviour:
   enterArea: 0
   isLeft: 1
   isTop: 1
+--- !u!114 &7191916238706037003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704504537533017276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b351fc5fb1d7c104caec6508d79b9846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  state: 0
 --- !u!1 &6263532869470363364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dsada
+  m_Text: 
 --- !u!1 &7253810042236906971
 GameObject:
   m_ObjectHideFlags: 0

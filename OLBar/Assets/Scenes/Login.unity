@@ -1565,7 +1565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.1, y: -3.5}
+  m_AnchoredPosition: {x: 11.100006, y: -3.5}
   m_SizeDelta: {x: 2.1292725, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165206568
@@ -9353,7 +9353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276626318529102296, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
       propertyPath: offlineScene
-      value: 
+      value: Assets/Scenes/Login.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4276626318529102297, guid: 48c7138cdbc070043a0140e446b3fa57, type: 3}
       propertyPath: m_LocalPosition.x
