@@ -1,6 +1,6 @@
 /**
 *   @file User.cs
-*   @brief User scipt. Attached to user prefab
+*   @brief User script. Attached to user prefab
 *   
 *   This file contains functions to handle user actions, including user status, 
 *   getting tired over time.
@@ -13,6 +13,9 @@ using System;
 using Mirror;
 using UnityEngine;
 
+/**
+*   @brief User class. Attached to the user prefab
+*/
 public class User : NetworkBehaviour
 {
     [SyncVar]
@@ -36,8 +39,6 @@ public class User : NetworkBehaviour
     *   @brief Initialize user prefab. Created when creating new user
     *
     *   Create new user. Initialize basic users.
-    *   
-    *   
     */
     public override void OnStartLocalPlayer()
     {

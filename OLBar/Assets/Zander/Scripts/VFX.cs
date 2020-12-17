@@ -1,9 +1,22 @@
-﻿using System.Collections;
+﻿/**
+*   @file VFX.cs
+*   @brief visual effect script. Attached to user prefab
+*   
+*   This file contains functions to handle visual effects. When user property
+*   (e.g. getting hungry/drunk/tired), add camera visual effects.
+*
+*   @author Zander Mao
+*   @bug values need to be kept in the proper range.
+*   @todo bind to users
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using Mirror;
 
-public class VFX : MonoBehaviour
+public class VFX : NetwrokBehaviour
 {
     // Start is called before the first frame update
     User user;
@@ -13,7 +26,6 @@ public class VFX : MonoBehaviour
     LensDistortion m_LensDistortion;
     void Start()
     {
-        user = GetComponent<User>();
         if (user.isLocalPlayer)
         {
             return;

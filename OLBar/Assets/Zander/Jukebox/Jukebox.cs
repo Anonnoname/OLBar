@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/**
+*   @file Jukebox.cs
+*   @brief Create shared jukebox. Not finished.    
+*
+* 	This file is reserved for a shared jukebox
+*
+*   @author Zander Mao
+*   @todo implement synchronized jukebox
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
