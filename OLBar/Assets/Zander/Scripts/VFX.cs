@@ -7,7 +7,6 @@
 *
 *   @author Zander Mao
 *   @bug values need to be kept in the proper range.
-*   @todo bind to users
 */
 
 using System.Collections;
@@ -48,7 +47,7 @@ public class VFX : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (user != null)
+        if (user != null) // make sure the effect is bind to the player.
         {
             m_Vignette.intensity.value = user.sleepiness;
             m_ColorGrading.saturation.value = -user.hunger;

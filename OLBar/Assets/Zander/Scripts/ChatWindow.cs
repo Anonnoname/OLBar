@@ -33,13 +33,26 @@ public class ChatWindow : NetworkBehaviour
     }
 
     /**
-    *   @brief function invoked when the user is 
+    *   @brief function invoked when the user receives the message.
+    *   @param[in] user - the user who sent the message.
+    *   @param[in] message - the message received.
     */
     public void OnUserMessage(User user, string message)
     {
         StartCoroutine(ShowMessage(user, message));
     }
 
+    /**
+    *   @brief Coroutine for displaying message. 
+    *
+    *   The user can always see the message sent. However, if the distance 
+    *   between the user and another is too far, the user can't see the other 
+    *   user's message. By default, the message is displayed for 5 seconds.
+    *   
+    *   @param[in] user - the user who sent the message.
+    *   @param[in] message - the content of the message.
+    *   @bug No known bug.
+    */
     IEnumerator ShowMessage(User user, string message)
     {
         Text text = user.chatBox.GetComponent<Text>();
@@ -69,6 +82,12 @@ public class ChatWindow : NetworkBehaviour
         text.text = "";
     }
 
+    /**
+    *   @brief Invoked when press send button
+    *
+    *   Send message to server. Empty message and white characters will be 
+    *   trimmed.
+    */
     public void OnSend()
     {
         if (chatMessage.text.Trim() == "")
