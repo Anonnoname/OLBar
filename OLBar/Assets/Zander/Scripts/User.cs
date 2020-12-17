@@ -27,7 +27,6 @@ public class User : NetworkBehaviour
     [SyncVar]
     public int currency; // currency system
 
-    [SyncVar]
     public float sleepiness; // sleepiness
 
     [SyncVar]
@@ -65,17 +64,3 @@ public class User : NetworkBehaviour
     * @brief Deduce user property as time passes
     */
     private void Tired()
-    {
-        if (hunger < 100)
-        {
-            hunger += 0.0001f;
-        }
-        if (sleepiness < 1)
-        {
-            sleepiness += 0.000001f;
-        }
-    }
-
-}
-
-
