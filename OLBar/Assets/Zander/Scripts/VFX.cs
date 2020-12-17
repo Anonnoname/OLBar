@@ -16,7 +16,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using Mirror;
 
-public class VFX : NetwrokBehaviour
+public class VFX : NetworkBehaviour
 {
     // Start is called before the first frame update
     User user;

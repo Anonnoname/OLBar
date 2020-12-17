@@ -26,7 +26,7 @@ public class BartenderTrigger : NetworkBehaviour
         if (other.GetComponent<User>().isLocalPlayer) 
         // only trigger if is local player
         {
-            other.GetComponent<drinkUI>().enterArea = true;
+            other.GetComponent<DrinkUI>().enterArea = true;
         }
     }
 
@@ -41,7 +41,7 @@ public class BartenderTrigger : NetworkBehaviour
         if (other.GetComponent<User>().isLocalPlayer)
         // only trigger if is local player
         {
-            other.GetComponent<drinkUI>().enterArea = false; 
+            other.GetComponent<DrinkUI>().enterArea = false; 
         }
         
     }

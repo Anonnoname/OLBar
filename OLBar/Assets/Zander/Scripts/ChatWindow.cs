@@ -20,8 +20,17 @@ using System.Collections;
 */
 public class ChatWindow : NetworkBehaviour
 {
+    public InputField chatMessage;
     public Chat chat;
-    public User local;
+    public User localUser;
+
+    /**
+    *   @brief Invoked when chatwindow is awake
+    */
+    public void Awake()
+    {
+        Chat.OnMessage += OnUserMessage;
+    }
 
     /**
     *   @brief function invoked when the user is 
@@ -74,4 +83,4 @@ public class ChatWindow : NetworkBehaviour
 
         chatMessage.text = "";
     }
-
+}
