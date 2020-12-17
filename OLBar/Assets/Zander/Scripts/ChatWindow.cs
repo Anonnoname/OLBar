@@ -15,12 +15,9 @@ using Mirror;
 using System.Collections;
 
 
-<<<<<<< HEAD
-=======
 /**
 *   @brief Class for ChatWindow
 */
->>>>>>> zander_n
 public class ChatWindow : NetworkBehaviour
 {
     public InputField chatMessage;
