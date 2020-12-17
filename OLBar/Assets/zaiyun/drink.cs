@@ -14,8 +14,8 @@ public class Drink : NetworkBehaviour
         user = GetComponent<User>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void drink(string wine)
     {
-
+        user.sanity -= 10;
+    }
 }

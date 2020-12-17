@@ -410,7 +410,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4114265765642225674
+--- !u!1 &1777947444303194255
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,8 +418,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4681992462080311689}
-  - component: {fileID: 8703874878097526941}
+  - component: {fileID: 2694236380127668198}
+  - component: {fileID: 8534292563404177036}
   m_Layer: 0
   m_Name: bartender
   m_TagString: Untagged
@@ -427,27 +427,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4681992462080311689
+--- !u!4 &2694236380127668198
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4114265765642225674}
+  m_GameObject: {fileID: 1777947444303194255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.08, y: 3.15, z: 3.3660817}
-  m_LocalScale: {x: 8.675065, y: 13.674273, z: 33.802795}
+  m_LocalPosition: {x: 9.67, y: 2.57, z: 3.3660817}
+  m_LocalScale: {x: 8.854423, y: 10.145, z: 447.76056}
   m_Children: []
   m_Father: {fileID: 5704504537533017272}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8703874878097526941
+--- !u!212 &8534292563404177036
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4114265765642225674}
+  m_GameObject: {fileID: 1777947444303194255}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -481,12 +481,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 60c697b4a1b7d46408859e6563d9c002, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Sprite: {fileID: 21300000, guid: 2578b07f9349fc04babeab37f38f6c8c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -755,8 +755,8 @@ GameObject:
   - component: {fileID: 8841363307325957350}
   - component: {fileID: 8772938889009125090}
   - component: {fileID: 5306843323843766843}
-  - component: {fileID: 2251345979884186763}
   - component: {fileID: 1855480539369162285}
+  - component: {fileID: -8950009011216303953}
   m_Layer: 0
   m_Name: User
   m_TagString: Untagged
@@ -778,7 +778,7 @@ Transform:
   - {fileID: 6304835822833403780}
   - {fileID: 1414524369996964560}
   - {fileID: 3153020658254326553}
-  - {fileID: 4681992462080311689}
+  - {fileID: 2694236380127668198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  bartender: {fileID: 4114265765642225674}
+  bartender: {fileID: 1777947444303194255}
   chatbox: {fileID: 206666175665237646}
   chatboxText: {fileID: 5105877523647414672}
   menu: {fileID: 4608979513316676720}
@@ -988,20 +988,6 @@ MonoBehaviour:
   serverOnly: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &2251345979884186763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5704504537533017276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6257df4c04e2dee4d828625bf0fd418b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!114 &1855480539369162285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,6 +1003,24 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   state: 0
+--- !u!114 &-8950009011216303953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704504537533017276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1 &6263532869470363364
 GameObject:
   m_ObjectHideFlags: 0

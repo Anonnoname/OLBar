@@ -55,6 +55,11 @@ public class User : NetworkBehaviour
         ChatWindow window = GameObject.Find("ChatWindow").GetComponent<ChatWindow>();
         window.localUser = this;
 
+        if (isLocalPlayer)
+        {
+            VFX vFX = GameObject.Find("VFX").GetComponent<VFX>();
+            vFX.user = this;
+        }
         // setup visual effects
         InvokeRepeating("Tired", 5.0f, 0.0001f);
     }

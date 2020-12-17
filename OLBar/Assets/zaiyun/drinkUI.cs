@@ -107,9 +107,6 @@ public class DrinkUI : NetworkBehaviour
                     drink.drink("beer");
                 }
             }
-
-
-
         }
         else
         {
