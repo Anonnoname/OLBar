@@ -1,12 +1,25 @@
+/**
+*   @file User.cs
+*   @brief User script. Attached to user prefab
+*   
+*   This file contains functions to handle user actions, including user status, 
+*   getting tired over time.
+*
+*   @author Zander Mao
+*   @bug No known bugs.
+*/
+
 using System;
 using Mirror;
 using UnityEngine;
 
-
+/**
+*   @brief User class. Attached to the user prefab
+*/
 public class User : NetworkBehaviour
 {
     [SyncVar]
-    public string userName;
+    public string userName; // user name
 
     [SyncVar]
     public int sanity; // sanity system
@@ -14,7 +27,6 @@ public class User : NetworkBehaviour
     [SyncVar]
     public int currency; // currency system
 
-    [SyncVar]
     public float sleepiness; // sleepiness
 
     [SyncVar]
@@ -22,10 +34,11 @@ public class User : NetworkBehaviour
 
     public GameObject chatBox; // chatbox
 
-    // VISUAL EFFECTS
-    // chatwindow
-
-
+    /**
+    *   @brief Initialize user prefab. Created when creating new user
+    *
+    *   Create new user. Initialize basic users.
+    */
     public override void OnStartLocalPlayer()
     {
         Camera.main.transform.SetParent(transform);
@@ -42,11 +55,19 @@ public class User : NetworkBehaviour
         ChatWindow window = GameObject.Find("ChatWindow").GetComponent<ChatWindow>();
         window.localUser = this;
 
+        if (isLocalPlayer)
+        {
+            VFX vFX = GameObject.Find("VFX").GetComponent<VFX>();
+            vFX.user = this;
+        }
         // setup visual effects
         InvokeRepeating("Tired", 5.0f, 0.0001f);
     }
 
 
+    /**
+    * @brief Deduce user property as time passes
+    */
     private void Tired()
     {
         if (hunger < 100)
@@ -58,7 +79,4 @@ public class User : NetworkBehaviour
             sleepiness += 0.000001f;
         }
     }
-
 }
-
-

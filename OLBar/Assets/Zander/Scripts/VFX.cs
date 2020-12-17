@@ -1,11 +1,24 @@
-﻿using System.Collections;
+/**
+*   @file VFX.cs
+*   @brief visual effect script. Attached to user prefab
+*   
+*   This file contains functions to handle visual effects. When user property
+*   (e.g. getting hungry/drunk/tired), add camera visual effects.
+*
+*   @author Zander Mao
+*   @bug values need to be kept in the proper range.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 using UnityEngine.Rendering.PostProcessing;
 
-public class VFX : MonoBehaviour
+public class VFX : NetworkBehaviour
 {
-    User user;
+    // Start is called before the first frame update
+    public User user;
     PostProcessVolume m_Volume; // post processing filter
     Vignette m_Vignette;
     ColorGrading m_ColorGrading;
@@ -15,7 +28,6 @@ public class VFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        user = GetComponentInParent<User>();
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
         m_Vignette.intensity.Override(0f);
@@ -35,9 +47,11 @@ public class VFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Vignette.intensity.value = user.sleepiness;
-        m_ColorGrading.saturation.value = user.hunger;
-        m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - user.sanity);
-
+        if (user != null) // make sure the effect is bind to the player.
+        {
+            m_Vignette.intensity.value = user.sleepiness;
+            m_ColorGrading.saturation.value = -user.hunger;
+            m_LensDistortion.intensity.value = Mathf.Sin(Time.realtimeSinceStartup) * (100 - user.sanity);
+        }
     }
 }

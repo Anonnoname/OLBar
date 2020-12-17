@@ -51,16 +51,16 @@ MonoBehaviour:
   showDebugMessages: 0
   serverTickRate: 30
   offlineScene: 
-  onlineScene: Assets/Zander/Scenes/OLBar.unity
-  transport: {fileID: 4595672880283102326}
+  onlineScene: 
+  transport: {fileID: 4276626318529102299}
   networkAddress: localhost
   maxConnections: 4
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 5704504537533017276, guid: d93f9850503a2f540b4d984731df2aa1, type: 3}
-  autoCreatePlayer: 0
-  playerSpawnMethod: 1
+  playerPrefab: {fileID: 0}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
   spawnPrefabs: []
 --- !u!114 &4276626318529102298
 MonoBehaviour:
